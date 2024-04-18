@@ -1,29 +1,21 @@
 /* eslint-disable react/no-unknown-property */
-import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
-
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience'
+import Utils from './Utils'
+import StoreBurger from './contents/StoreBurger'
 
 export default function App() {
   return (
     <div className='relative w-full h-screen'>
+      {/* <div className='absolute z-10 top-1/3 right-1/4'>
+        <StoreBurger />
+      </div> */}
       <Canvas
         className='absolute w-full h-screen'
       >
-        <PerspectiveCamera makeDefault fov={75} position={[60, 46, 90]} />
-
-        <OrbitControls enableDamping enablePan={false} autoRotate autoRotateSpeed={0.02} rotateSpeed={0.2} minDistance={70} maxDistance={120} />
-
-        <directionalLight
-          intensity={2}
-          position={[325, 259, -174]}
-        />
-
-        <ambientLight intensity={2} />
-
-        <Environment preset={'night'} background blur={1} />
-
+        <Utils />
         <Experience />
+
       </Canvas>
     </div>
   )

@@ -7,11 +7,12 @@ export default function StoreBurger({ nodes, materials }) {
       position={[-13.928, 10.223, 98.949]}
       rotation={[Math.PI / 2, 0, 0]}
     >
-      <Html rotation={[-(Math.PI / 2), 0, 0]} position={[-10, 10, -20]} transform distanceFactor={100}>
-        <div className='absolute bg-blue-500 p-5 text-white'>
+      {/* <Html rotation={[-(Math.PI / 2), 0, 0]} position={[-10, 10, -20]} transform distanceFactor={100}>
+        <div onClick={() => alert('first')} className='absolute bg-blue-500 p-5 text-white'>
           test
         </div>
-      </Html>
+      </Html> */}
+
       <mesh
         geometry={nodes.lo_poly_1.geometry}
         material={materials['planet 1']}
